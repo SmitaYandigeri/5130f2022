@@ -1,0 +1,102 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-position: center;
+    background-size: cover;
+}
+
+.main-menu {
+    background-color: darkblue;
+    text-align: center;
+}
+
+.main-menu ul {
+    display: inline-flex;
+    list-style: none;
+}
+
+.main-menu ul li {
+    width: 100px;
+    height: 20px;
+    margin: 41px;
+    padding: 20px;
+    
+}
+
+.main-menu ul li a {
+    color: antiquewhite;
+    font-size: 21px;
+    text-decoration: none;
+    padding : 8px 10px;
+    
+   
+   
+ }
+
+.main-menu ul li a:hover {
+    color : red;
+}
+
+section {
+}
+
+.centered img {
+    height: 585px;
+    width: 700px;
+
+}
+
+.screen {
+    height: 80%;
+    width: 55%;
+    position: fixed;
+    top: 20%;
+    padding-top: 20px;
+    margin: 0;
+   
+}
+
+.left {
+    left: 0;
+    background-color: #ffffff;
+  
+}
+.right {
+    right: 0;
+    text-align: center;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.p1 {
+    font-size: 15px;
+}
+
+.p2 {
+    font-size: 25px;
+}
+
+
+.h1 {
+    font-size: 38px;
+    font-style: italic;
+}
+
+.h2 {
+    font-size: 30px;
+}
+
+#HOME {
+}
+
+#EDUCATION {
+    
+}
