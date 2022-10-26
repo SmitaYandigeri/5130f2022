@@ -13,29 +13,28 @@ body {
     text-align: center;
 }
 
-.main-menu ul {
-    display: inline-flex;
-    list-style: none;
-}
+    .main-menu ul {
+        display: inline-flex;
+        list-style: none;
+    }
 
-.main-menu ul li {
-    width: 100px;
-    height: 20px;
-    margin: 41px;
-    padding: 20px;
-    
-}
+        .main-menu ul li {
+            width: 100px;
+            height: 20px;
+            margin: 41px;
+            padding: 20px;
+        }
 
-.main-menu ul li a {
-    color: antiquewhite;
-    font-size: 21px;
-    text-decoration: none;
-    padding : 8px 10px;   
- }
+            .main-menu ul li a {
+                color: antiquewhite;
+                font-size: 21px;
+                text-decoration: none;
+                padding: 8px 10px;
+            }
 
-.main-menu ul li a:hover {
-    color : red;
-}
+                .main-menu ul li a:hover {
+                    color: red;
+                }
 
 section {
 }
@@ -43,7 +42,6 @@ section {
 .centered img {
     height: 585px;
     width: 700px;
-
 }
 
 .screen {
@@ -53,14 +51,13 @@ section {
     top: 20%;
     padding-top: 20px;
     margin: 0;
-   
 }
 
 .left {
     left: 0;
     background-color: #ffffff;
-  
 }
+
 .right {
     right: 0;
     text-align: center;
@@ -95,5 +92,9 @@ section {
 }
 
 #EDUCATION {
-    
+}
+#CONTACT {
+}
+#ABOUT menu{
+
 }

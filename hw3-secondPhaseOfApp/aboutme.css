@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-size: cover;
+    background-position: center;
+}
+
+.main-menu {
+    background-color: darkblue;
+    text-align: center;
+}
+.totalscreen{
+    width:80%;
+    margin:20px auto;
+}
+    .totalscreen .header {
+        width: 90%;
+        height: 100px;
+        text-align: center;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+         .header .text p{
+            text-align:center;
+            justify-content:center;
+            
+        }
+
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+.left {
+    width: 30%; 
+}
+.contact {
+        font-weight: bold;
+        text-align: center;
+}
+.skills{
+    margin-top:5px;
+    text-align:center;
+}
+.right {
+    width: 60%; 
+    margin-top:5px;
+   
+}
+.right h4{
+    font-size:35px;
+
+        font-weight:normal;
+}
+    .right h4 span {
+        font-size: 50px;
+        margin-right:30px;
+        color:lightgray;
+    }
+    .right p{
+        text-align:justify;
+        padding-left:70px;
+        margin-top:10px;
+        font-size: 16px;
+        color:gray;
+        margin-right: 30px;
+        word-break:break-all;
+    }
+    .exp{
+        margin:15px 0;
+    }
+    .exp expg{
+        position:relative;
+        font-size:35px;
+        color:black;
+    }
+.exp h4 span{
+    padding-left: 70px;
+    color: gray;
+}
+        .expg h5 {
+            padding-left: 70px;
+            color: gray;
+        }
+            .contact h4 {
+            
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.edu{
+    margin-top:5px;
+}
+.edu h4 span {
+    padding-left: 70px;
+    color: gray;
+}
+.edug h5 {
+    padding-left: 70px;
+    color: gray;
+}
+.edug span {
+    padding-left: 70px;
+    color: gray;
+    font-size: 15px;
+}
+.edug p{
+    font-size:15px;
+   
+}
+
+
+
+
+
+
+
+
+
+.contact h5{
+    font-size: 15px;
+    margin: 10px 0;
+}
+.contact p {
+    font-size: 14px;
+}
+
+.progbars{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    grid-gap:25px 10px;
+    padding:0 20px;
+}
+.progbars .progbar p{
+    font-size: 15px;
+    font-weight:bold;
+}
+
+.progbar span{
+    display:block;
+    width:100%;
+    margin-top:10px;
+    border-radius:10px;
+    position:relative;
+        height :10px;
+        background-color:gray;
+}
+.progbar span::before{
+    position:absolute;
+    content:"";
+    width:80%;
+    height:80%;
+    background-color:black;
+    top:50%;
+    left:2px;
+    transform:translateY(-50%);
+    border-radius:10px;
+
+}
+.main-menu ul {
+    display: inline-flex;
+    list-style: none;
+}
+
+        .main-menu ul li {
+            width: 100px;
+            height: 20px;
+            margin: 41px;
+            padding: 20px;
+        }
+
+            .main-menu ul li a {
+                color: antiquewhite;
+                font-size: 21px;
+                text-decoration: none;
+                padding: 8px 10px;
+            }
+
+                .main-menu ul li a:hover {
+                    color: red;
+                }
+.model {
+    margin-top: 5%;
+    width: 100%;
+    height: 100%;
+    background-color: lightblue;
+    text-align: center;
+}
+
+    .model div {
+        margin: 10px;
+    }
+}
+section {
+}
+
+.centered img {
+    height: 585px;
+    width: 700px;
+}
+
+.screen {
+    height: 80%;
+    width: 55%;
+    position: fixed;
+    top: 20%;
+    padding-top: 20px;
+    margin: 0;
+}
+
+.left {
+    left: 0;
+    background-color: #ffffff;
+    text-align: left;
+}
+
+.right {
+    right: 0;
+    text-align: left;
+}
+
+.centered {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+label {
+    color: #B4886B;
+    font-weight: bold;
+    display: block;
+    width: 150px;
+    float: left;
+}
+
+    label:after {
+        content: ": "
+    }
+.p1 {
+    font-size: 15px;
+}
+
+.p2 {
+    font-size: 25px;
+}
+
+
+.h1 {
+    font-size: 38px;
+    font-style: italic;
+}
+
+.h2 {
+    font-size: 30px;
+}
+
+#HOME {
+}
+
+#EDUCATION {
+}
