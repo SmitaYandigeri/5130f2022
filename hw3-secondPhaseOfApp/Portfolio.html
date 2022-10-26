@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="chart.css">
+    <script src="https://kit.fontawesome.com/fd7e252455.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        google.charts.load('current', { packages: ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var ch = new google.visualization.DataTable();
+            ch.addColumn('string', 'Websites');
+            ch.addColumn('number', 'Percentage');
+            ch.addRows([
+                ['Amazon', 0.75],
+                ['Flipkart', 0.20],
+                ['Myntra', 0.05],
+                ['Others', 0.01]
+            ]);
+
+
+            var c = new google.visualization.PieChart(document.getElementById('chp'));
+            c.draw(ch, null);
+        }
+    </script>
+</head>
+<body>
+    <section id="PORTFOLIO">
+        <div class="abc">
+        <header>
+            <div class="main-menu">
+                <ul>
+                    <li><a href="index.html"> HOME  </a></li>
+                    <li><a href="userdetails.html">VISITORS DETAILS</a></li>
+                    <li><a href="Portfolio.html">PORTFOLIO</a></li>
+                    <li><a href="aboutme.html"> ABOUT ME  </a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+
+                </ul>
+            </div>
+        </header>
+        <div class="totalscreen">
+            <div class="header">
+                <div class="text">
+                    <p>MY ONLINE PURCHASES</p>
+                </div>
+            </div>
+            <div class="content">
+                <div class="abc1">
+                        <p id="chp" style="width:1050px; height: 600px; " />
+                   
+                </div>
+            </div>
+            </div>
+            </div>
+</section>
+</body>
+</html>
+

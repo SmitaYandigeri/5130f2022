@@ -3,122 +3,105 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
     <title>Smita Yandigeri</title>
     <link rel="stylesheet" href="StyleSheet2.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <script src="https://kit.fontawesome.com/fd7e252455.js" crossorigin="anonymous"></script>
-    <script type = "text/javascript"> 
-    
-        var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024); 
-        db.transaction(function (tx) {   
-                tx.executeSql('CREATE TABLE IF NOT EXISTS USERS (emailID unique, fullName, homePlace, currentPlace, futurePlace, bestPlace, recentPlace, age, gender, message, fileName )');    
-            })
-        
-        document.addEventListener('DOMContentLoaded', ()=> {
-            document.getElementById('sbt').addEventListener('click', addData);
-        });
-
-        let users = [];
-        const addData = (ev) => {
-                ev.preventDefault();
-                let userData = {
-                    emailID: document.getElementById('emailID').innerText,
-                    fullName: document.getElementById('fullName').value,
-                    homePlace: document.getElementById('homePlace').value,
-                    currentPlace: document.getElementById('currentPlace').value,
-                    futurePlace: document.getElementById('futurePlace').value,
-                    bestPlace: document.getElementById('bestPlace').value,
-                    recentPlace: document.getElementById('recentPlace').value,
-                    age: document.getElementById('age').value,
-                    gender: document.getElementById('gender').value,
-                    message: document.getElementById('message').value,
-                    fileName: document.getElementById('fileName').value
-                }
-
-                users.push(userData);
-
-                alert('Thank You! your data is stored')
-        }
-    
-    </script>
-
 </head>
 <body>
-    <section id="CONTACT">
+    <section id="VISITORSDETAILS">
         <header>
             <div class="main-menu">
                 <ul>
-                    <li><a href="index.html"><i class="fa-solid fa-house-user"></i>  HOME  </a></li>
-                    <li><a href="userdetails.html"><i class="fa-solid fa-user-graduate"></i>USER DETAILS</a></li>
-                    <li><a href="aboutme.html"><i class="fa-solid fa-briefcase"></i>  ABOUT ME  </a></li>
-                    <li><a href="contact.html"><i class="fa-solid fa-address-book"></i> CONTACT</a></li>
+
+                    <li><a href="index.html"> HOME  </a></li>
+                    <li><a href="userdetails.html">VISITORS DETAILS</a></li>
+                    <li><a href="Portfolio.html">PORTFOLIO</a></li>
+                    <li><a href="aboutme.html"> ABOUT ME  </a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                   
+
                 </ul>
             </div>
         </header>
     </section>
 
-    <div class = "card">
+    <div class="card">
+        <h1 id="message"></h1>
         <h1>Lets Know Our Visitor Details</h1>
-        <form class="frm" action ="#" method = "post">
+        <form>
             <div>
-                <input style="height:30px;font-size:15pt;border-style: outset;" type="text" id="fullName" placeholder="Full Name" size="50">
+                <input type="text" id="fullName" name="fullName" placeholder="Full Name" size="50" required>
             </div>
 
             <div>
-                <input style="height:30px;font-size:15pt;border-style: outset;" type="email" id="email" placeholder="Email" size="50">
+                <input  type="email" id="email" name="email" placeholder="Email" size="50" required>
             </div>
 
             <div>
-                <input style="height:30px;font-size:15pt;border-style: outset;" type="text" id="homePlace" placeholder="Where Are You From [Hometown]?" size="50"> <br>
-            </div>
-            
-            <div>
-                <input id = "currentLocation" style="height:30px;font-size:15pt;border-style: outset;" type="text" id="currentPlace" placeholder="Where Do You Live [Current City]?" size="50"> <br>
-               
+                <input type="text" id="homePlace" name="homePlace" placeholder="Where Are You From [Hometown]?" size="50"> <br>
             </div>
 
             <div>
-                <input style="height:30px;font-size:15pt;border-style: outset;" type="text" id="futurePlace" placeholder="Where Would You Like To Settle?" size="50">
-            </div>
-                        
-            <div>
-                <input style="height:30px;font-size:15pt;border-style: outset;" type="text" id="bestPlace" placeholder="What is Your Favorite Place?" size="50">
-            </div>
-            
-            <div>
-                <input style="height:30px;font-size:15pt;border-style: outset;" type="text" id="recentPlace" placeholder="What Tourist Place did You Visit Recently?" size="50">
+                <input id="currentLocation" name="currentLocation"  type="text" placeholder="Where Do You Live [Current City]?" size="50"> <br>
+
             </div>
 
             <div>
-                Age: 
-                <input style="height:30px;font-size:15pt;border-style: outset;" type="number" min="1" max="100" id="age">
+                <input  type="text" id="futurePlace" name="futurePlace" placeholder="Where Would You Like To Settle?" size="50">
             </div>
 
             <div>
-                Gender:
-                <input type="radio" id="html" id="gender" value="Male">
-                <label style="height:30px;font-size:15pt;border-style: outset;" for="male">MALE</label>
-                <input type="radio" id="html" id="gender" value="Female">
-                <label style="height:30px;font-size:15pt;border-style: outset;" for="female">FEMALE</label>
+                <input  type="text" id="bestPlace" name="bestPlace" placeholder="What is Your Favorite Place?" size="50">
             </div>
-            
+
             <div>
-                <textarea style="height:30px;font-size:15pt;border-style: outset;" rows="5" cols="50" id="message">
+                <input  type="text" id="recentPlace" name="recentPlace" placeholder="What Tourist Place did You Visit Recently?" size="50">
+            </div>
+
+            <div>
+                Age:
+                <input  type="number" min="1" max="100" id="age" name="age" required>
+            </div>
+
+            <div>
+                <textarea  rows="5" cols="50" id="message" name="message">
                     Your Message To Me
                 </textarea>
             </div>
 
             <div>
-                Upload Resume: 
-                <input style="height:30px;font-size:15pt;border-style: outset;" type="file" id="myFile" id="filename">
+                Upload Resume:
+                <input  type="file" id="filename" name="filename">
             </div>
 
             <div>
-                <button style="height:30px;font-size:15pt;border-style: outset;" type="submit" id="sbt"> Submit </button>
-                <button style="height:30px;font-size:15pt;border-style: outset;" type="reset"> Reset </button>
+                <input  type="submit" id="submit" />
+                <input  type="reset" id="reset" />
+
             </div>
         </form>
+        <script>
+            let form = document.querySelector("form");
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                var d = new FormData(form);
+                document.querySelector("#submit").value = "Submiting.."
+                fetch('https://script.google.com/macros/s/AKfycbzCohxHLOZkWTuLHt9kosc1OfzsDKQ70e-QGXDnsYdQZlxD0snBfD-Ik9Uy2G4Hm6qI_Q/exec', {
+                    method: "post",
+                    body: d
+                })
+                    .then(res => res.text())
+                    .then(d => {
+                        document.querySelector("#message").innerHTML = d;
+                        document.querySelector("#submit").value = "Submit"
+                        form.reset();
+                    });
+                
+            })
+        </script>
     </div>
 </body>
 </html>

@@ -71,7 +71,7 @@ section {
 }
 
 .p1 {
-    font-size: 15px;
+    font-size: 5px;
 }
 
 .p2 {
@@ -87,7 +87,25 @@ section {
 .h2 {
     font-size: 30px;
 }
+.foot{
+    height: 100vh;
+   
+    display:flex;
+    align-items: flex-start;
+}
+.foot a{
+  margin-top:10px;
+    height:100px;
+    width:100px;
+    text-align:center;
+    margin:10px;
+    text-decoration:none;
+   
+}
 
+.foot a i{
+    font-size:30px;
+}
 #HOME {
 }
 
