@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="./registration.js"></script>
+</head>
+<body>
+ <div class="main">
+    <div class="midpage">
+        <div class="head-button">
+            <div id="butn"></div>
+            <button type="button" class="field-btn" onclick="moveTologin()">Log In</button>
+            <button type="button" class="field-btn"onclick="moveToRegister()">Register</button>
+        </div>
+        <form id="login" class="login-group">
+            <input id="loginUserName" type="text" class="login-field" placeholder="Email/User Id" required>
+            <input id="loginPassword" type="text" class="login-field" placeholder="Password" required>
+            <input type="checkbox" class="check-box"><span>Remember Password</span>
+            <button type="submit" class="submit-butn" onclick="login()">Log In</button>
+        </form>
+        <form id="register" class="login-group">
+            <input id="firstName" type="text" class="login-field" placeholder="First Name" required>
+            <input id="lastName" type="text" class="login-field" placeholder="Last Name" required>
+            <input id="emailId" type="text" class="login-field" placeholder="Email/User Id" required>
+            <input id="password" type="text" class="login-field" placeholder="Password" required>
+            <input id="termsAndCondition" type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
+            <button type="submit" class="submit-butn" onclick="register()">Log In</button>
+        </form>
+    </div>
+ </div>
+</body>
+</html>
