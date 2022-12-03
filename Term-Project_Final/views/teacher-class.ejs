@@ -1,0 +1,103 @@
+<!--**
+ * Developed By : Balakrishnan, RajKrithika[html changes] & Yandigeri, Smita [ejs changes]
+ * This is a Teacher Class Screen
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher Portal</title>
+  <link rel="stylesheet" href="../client/assets/style/nav-bar.css">
+  <link rel="stylesheet" href="../client/assets/style/main-data.css">
+  <script src="https://kit.fontawesome.com/fd7e252455.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#icon').click(function(){
+        $('ul').toggleClass('show');
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <nav>
+    <label href= "/api/refresh" class="logo">
+      <img src="https://static.vecteezy.com/system/resources/previews/005/083/199/non_2x/an-icon-design-of-homework-in-flat-outline-design-vector.jpg" 
+      height="40" alt="Student Homework" loading="lazy" />
+      <span style="width: 5px;"></span> HomeWork
+    </label>
+      <ul>
+        <li><a href="/api/profile">Profile</a></li>
+        <li><a class="active" href="/api/class">MyClass</a></li>
+        <li><a href="/api/homework">HomeWork</a></li>
+        <li><a href="/api/submission">Submission</a></li>
+        <li><a href="/api/logout">Logout</a></li>
+      </ul>
+      <label id="icon">
+        <i class="fas fa-solid fa-bars"></i>
+      </label>
+  </nav>
+
+  <div>
+    <main id="site-main">
+      <div class="container">
+        <header id="header">
+          <nav>
+            <div class="text-center">
+              <a href="/api/class" class="nav-brand text-dark">Class Management</a>
+            </div>
+          </nav>
+        </header>
+        <div class="box-nav d-flex justify-between">
+            <button class="border-shadow" id="btnAdd" 
+            style="height:30px; width:120px; font-family: monsterrat;cursor: pointer;font-size: 15px;">
+              <span class ="text-gradient">Add Class <i class="fas fa-solid fa-user"></i></span> 
+            </button>
+        </div>
+
+        <form>
+            <table class="table" id="tblData">
+                <thead class="thead-dark">
+                    <tr>
+                      <th>Serial No </th>
+                      <th>Class Name </th>
+                      <th>Class Code</th>
+                      <th>Invitation Code</th>
+                      <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <% if (classes) { %>
+                    <% for(var i = 0; i < classes.length; i++) { %>
+                      <tr>
+                          <td class="tdSlNo"><%= i + 1 %></td>
+                          <td class="tdClassName"><%= classes[i].CLASS_NAME %></td>
+                          <td class="tdClassCode"><%= classes[i].CLASS_CODE %></td>
+                          <td class="tdInvitation"><%= classes[i].INVITATION_CODE %></td>
+                          <td class="tdAction">
+                            <a href="#" title="View Homework" class="btn border-shadow view">
+                                <span class="text-gradient"><i class="fas fa-solid fa-eye"></i></span>
+                            </a>
+                            <a href="#" title="Edit Class" class="btn border-shadow edit">
+                              <span class="text-gradient"><i class="fas fa-solid fa-pencil-alt"></i></span>
+                            </a>
+                            <a href="#" title="Delete Class" class="btn border-shadow delete">
+                              <span class="text-gradient"><i class="fas fa-solid fa-trash"></i></i></span>
+                            </a>
+                          </td>
+                      </tr>
+                    <% } %>
+                  <% } %> 
+                </tbody>
+            </table>
+        </form>
+      </div>
+    </main>
+  </div>
+  <script src="../client/js/teacher-class.js"></script>
+</body>
+</html>
